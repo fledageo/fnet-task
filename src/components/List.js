@@ -1,4 +1,5 @@
 import Card from "./Card.js"
+import Toast from "./Toast.js"
 
 export class List {
     constructor(users, location) {
@@ -42,10 +43,15 @@ export class List {
             }
         })
 
+        let toast = new Toast("User updated successfully!")
+        toast.show()
         this.setUsers(updatedUsers) 
     }
     deleteUser(userId){
         let updatedUsers = this.users.filter(user => user.id !== userId)
+
+        let toast = new Toast("User deleted successfully!")
+        toast.show()
         this.setUsers(updatedUsers)
     }
 }

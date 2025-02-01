@@ -1,6 +1,7 @@
 @import url("./header.css");
 @import url("./content.css");
 @import url("./modal.css");
+@import url("./toast.css");
 
 * {
     padding: 0;
@@ -81,8 +82,7 @@
         background: none;
         transition: 0.2s;
         color: #1D3557;
-        justify-self: end;
+        
     }
 
-    /* .header_container */
 }
