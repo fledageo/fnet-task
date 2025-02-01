@@ -1,0 +1,88 @@
+@import url("./header.css");
+@import url("./content.css");
+@import url("./modal.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+/* --------------------------------------- */
+
+.sidebar {
+    min-height: 100vh;
+    background-color: #1D3557;
+    width: 200px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar_closeBtn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+}
+
+.main {
+    width: calc(100% - 200px);
+    min-height: 100vh;
+}
+
+/*--------------------- media -------------------------*/
+
+@media(max-width:768px) {
+    .container {
+        padding: 15px 15px;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -200px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .header_container {
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:576px) {
+    .search_container>input {
+        display: none;
+    }
+
+    .header_search {
+        padding: 0;
+        border: none;
+    }
+
+    .search_container>button {
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #DADEE2;
+        background: none;
+        transition: 0.2s;
+        color: #1D3557;
+        justify-self: end;
+    }
+
+    /* .header_container */
+}
